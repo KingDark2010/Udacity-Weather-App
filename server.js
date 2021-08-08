@@ -21,6 +21,17 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
+// post data to server
+app.post('postData', (req, res) => {
+    projectData = { ...req.body};
+    res.send();
+});
+
+// get data from server
+app.get('getData', (req, res) => {
+    res.send(projectData);
+});
+
 
 // Initialize the main project folder
 app.use(express.static('website'));
