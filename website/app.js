@@ -16,7 +16,7 @@ generateBTN.addEventListener("click", async function() {
     const resp = await fetch(fullAPILink);
     const data = await resp.json();
     //console.log(data);
-    //const temps = data.main.temp; it cause error
+    const temps = data.main.temp;
     //console.log(temps);
     // send data to server.js
 
