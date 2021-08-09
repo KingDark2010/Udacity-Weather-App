@@ -15,9 +15,9 @@ generateBTN.addEventListener("click", async function() {
     const fullAPILink = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode.value}&appid=${myAPIKey}`;
     const resp = await fetch(fullAPILink);
     const data = await resp.json();
-    console.log(data);
-    const temps = data.main.temp;
-    console.log(temps);
+    //console.log(data);
+    //const temps = data.main.temp; it cause error
+    //console.log(temps);
     // send data to server.js
 
     await fetch('/postData'), {
