@@ -21,14 +21,15 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
-// post data to server
-app.post('postData', (req, res) => {
+// api end point  
+app.post('/postData', (req, res) => {
     projectData = { ...req.body};
     res.send();
 });
 
-// get data from server
-app.get('getData', (req, res) => {
+
+// send data to client
+app.get('/getData', (req, res) => {
     res.send(projectData);
 });
 
